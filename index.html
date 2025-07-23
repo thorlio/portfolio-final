@@ -2,60 +2,106 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sandy Thor - Portfolio</title>
-    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sandy Thor's Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
-    <header class="page-header">
-        <nav class="main-navigation page-header__item">
-            <ul role="menubar" class="navigation-list">
-                <li role="presentation">
-                    <a href="index.html" role="menuitem"
-                        class="navigation-list__item navigation-list__item--active">Home</a>
-                </li>
-                <li role="presentation">
-                    <a href="experience.html" role="menuitem" class="navigation-list__item">Experience</a>
-                </li>
-                <li role="presentation">
-                    <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Hello, I'm Sandy Thor</h1>
+    <p>Welcome to my developer portfolio. Check out some of my work below!</p>
+    <div class="social-links">
+      <a href="https://github.com/thorlio" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/YOUR_LINK" target="_blank">LinkedIn</a>
+    </div>
+  </header>
 
-    <section id="projects">
-        <div class="project-card">
-            <h2>Welcome to my portfolio!</h2>
-            <img src="img/meet_app.png" alt="Meet App Screenshot" class="responsive">
-            <p>Meet App is a serverless, progressive web application (PWA) built using React and the Google Calendar
-                API. The app allows users to search for upcoming events in various cities, view details, and visualize
-                event data using interactive charts. The project follows a Test Driven Development (TDD) approach to
-                ensure code quality and functionality.</p>
-            <ul>
-                <li><strong>Live App:</strong> <a href="https://meet-sandy-thors-projects.vercel.app"
-                        target="_blank">Visit Meet App</a></li>
-                <li><strong>GitHub Repository:</strong> <a href="https://github.com/thorlio/meet" target="_blank">View
-                        on GitHub</a></li>
-            </ul>
-            <h3>Technologies Used:</h3>
-            <ul>
-                <li>React</li>
-                <li>Vite</li>
-                <li>Google Calendar API</li>
-                <li>Recharts</li>
-                <li>PWA (Progressive Web App)</li>
-                <li>Testing (Jest, Puppeteer)</li>
-            </ul>
-        </div>
-    </section>
+  <div class="projects">
+    <div class="project-card">
+      <h3>MyFlix API</h3>
+      <img src="img/MyFlixApi_movieapi.png" alt="MyFlix API Screenshot">
+      <p><a href="#" onclick="toggleDescription('desc-api'); return false;">More Info</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/thorlio/movieapi" target="_blank">View Repo</a></p>
+      <p><strong>Live:</strong> <a href="https://ohmyflix-1cea4b4ad120.herokuapp.com/" target="_blank">View Live App</a></p>
+      <p id="desc-api" class="project-desc" style="display: none;">
+        RESTful API built with Node.js, Express, and MongoDB for the MyFlix app. Supports user registration, movie
+        database access, and authentication using JWT.<br><br>
+        <strong>Technologies Used:</strong> Node.js, Express.js, MongoDB, Mongoose, JWT, Heroku
+      </p>
+    </div>
 
-    <footer class="page-footer">
-        <p>&copy; 2025 Sandy Thor. All rights reserved.</p>
-    </footer>
+    <div class="project-card">
+      <h3>MyFlix React</h3>
+      <img src="img/MyFlixReactApp_movieapi-client.png" alt="MyFlix React Screenshot">
+      <p><a href="#" onclick="toggleDescription('desc-react'); return false;">More Info</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/thorlio/myFlixClient" target="_blank">View Repo</a></p>
+      <p><strong>Live:</strong> <a href="https://movieapi-client.netlify.app/" target="_blank">View Live App</a></p>
+      <p id="desc-react" class="project-desc" style="display: none;">
+        A single-page React application that allows users to browse movies, manage favorites, and update their profiles.
+        Fully responsive and styled with Bootstrap.<br><br>
+        <strong>Technologies Used:</strong> React, Bootstrap, JavaScript, HTML, CSS, Netlify
+      </p>
+    </div>
+
+    <div class="project-card">
+      <h3>MyFlix Angular</h3>
+      <img src="img/MyFlix-Angular-client.png" alt="MyFlix Angular Screenshot">
+      <p><a href="#" onclick="toggleDescription('desc-angular'); return false;">More Info</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/thorlio/myFlix-Angular-client" target="_blank">View Repo</a></p>
+      <p><strong>Live:</strong> <a href="https://thorlio.github.io/myFlix-Angular-client/" target="_blank">View Live App</a></p>
+      <p id="desc-angular" class="project-desc" style="display: none;">
+        Angular-based version of the MyFlix client app. Utilizes Angular Material and reactive forms for a modern and
+        dynamic frontend.<br><br>
+        <strong>Technologies Used:</strong> Angular, Angular Material, TypeScript, SCSS, GitHub Pages
+      </p>
+    </div>
+
+    <div class="project-card">
+      <h3>Meet App</h3>
+      <img src="img/meet_app.png" alt="Meet App Screenshot">
+      <p><a href="#" onclick="toggleDescription('desc-meet'); return false;">More Info</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/thorlio/meet" target="_blank">View Repo</a></p>
+      <p><strong>Live:</strong> <a href="https://meet-iota.vercel.app/" target="_blank">View Live App</a></p>
+      <p id="desc-meet" class="project-desc" style="display: none;">
+        A serverless, progressive web app using React and Google Calendar API. Users can filter events by city and
+        specify how many events to display. Works offline.<br><br>
+        <strong>Technologies Used:</strong> React, AWS Lambda, Google Calendar API, Jest, Cucumber, Vercel
+      </p>
+    </div>
+
+    <div class="project-card">
+      <h3>Chat App</h3>
+      <img src="img/chatapp.png" alt="Chat App Screenshot" class="chatapp-img">
+      <p><a href="#" onclick="toggleDescription('desc-chat'); return false;">More Info</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/thorlio/chat__app" target="_blank">View Repo</a></p>
+      <p><strong>Live:</strong> Was not hosted, used simulator.</p>
+      <p id="desc-chat" class="project-desc" style="display: none;">
+        A mobile chat app built with React Native and Firebase. Supports anonymous login, real-time messaging, image
+        sharing, and offline message caching.<br><br>
+        <strong>Technologies Used:</strong> React Native, Firebase, Expo, Firestore, AsyncStorage
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function toggleDescription(id) {
+      const desc = document.getElementById(id);
+      desc.style.display = desc.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+
+  <footer class="page-footer">
+    <p>&copy; 2025 Sandy Thor. All rights reserved.</p>
+  </footer>
 </body>
 
 </html>
